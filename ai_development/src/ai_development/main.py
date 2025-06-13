@@ -21,14 +21,7 @@ def run():
     }
     
     try:
-        result = AiDevelopment().crew().kickoff(inputs=inputs)
-
-         # Salvar o artefato em um arquivo
-        with open("relatorio_frameworks_ai.txt", "w", encoding="utf-8") as f:
-            f.write(result)
-            
-        print("✅ Artefato gerado e salvo como relatorio_frameworks_ai.txt")
-
+       AiDevelopment().crew().kickoff(inputs=inputs)      
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
